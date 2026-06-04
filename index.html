@@ -118,7 +118,7 @@
             
             .hero-desc { font-size: 1.2rem; color: #fff; max-width: 580px; margin: 0 auto 3.5rem; line-height: 1.8; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; font-weight: 500; direction: rtl; text-shadow: 0 2px 12px rgba(0,0,0,0.95); }
             
-            /* أزرار التشغيل والربط */
+            /* أزرار تفاعلية مخصصة للمميزات */
             .hero-action-area { display: flex; flex-direction: column; gap: 1rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s; width: fit-content; margin: 0 auto; }
             .hero-btns { display: flex; gap: 1.5rem; }
             
@@ -212,33 +212,6 @@
             .check-item { display: flex; align-items: center; gap: 1.2rem; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 1.2rem; text-shadow: 0 1px 5px rgba(0,0,0,0.8); }
             .check-mark { width: 28px; height: 28px; border-radius: 8px; background: rgba(255, 204, 0, 0.2); border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 0.9rem; box-shadow: 0 0 15px var(--primary-glow); }
     
-            /* كود برمجية التحميل */
-            .loader-wrap { padding: 6rem 2rem 10rem; }
-            .code-block-wrapper { max-width: 850px; margin: 0 auto; background: linear-gradient(180deg, rgba(28, 25, 6, 0.9) 0%, rgba(10, 10, 2, 0.95) 100%); border: 1px solid var(--border-light); border-radius: 16px; overflow: hidden; backdrop-filter: blur(20px); box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(255, 204, 0, 0.15); }
-            
-            .code-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgba(0,0,0,0.6); border-bottom: 1px solid var(--border-light); }
-            .code-title { display: flex; align-items: center; gap: 0.7rem; font-size: 0.95rem; font-weight: 600; color: #fff; letter-spacing: 0.05em; }
-            .code-title svg { color: var(--primary); }
-            
-            .copy-btn { background: rgba(255,255,255,0.05); border: 1px solid var(--border-light); color: var(--text-muted); cursor: pointer; transition: all 0.3s; padding: 0.5rem; border-radius: 8px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
-            .copy-btn:hover { color: var(--primary); background: rgba(255, 204, 0, 0.15); border-color: var(--primary); transform: scale(1.05); }
-            .copy-btn.copied { color: #4ade80; background: rgba(74, 222, 128, 0.1); border-color: #4ade80; }
-            
-            .code-content { padding: 2rem 1.5rem; overflow-x: auto; }
-            .code-content pre { margin: 0; font-family: 'Space Grotesk', monospace; font-size: 0.95rem; line-height: 1.8; color: var(--text-main); }
-            
-            /* تمييز السكربت */
-            .hl-func { color: #facc15; font-weight: 600; }
-            .hl-string { color: #4ade80; }
-            .hl-punct { color: var(--text-muted); }
-    
-            /* الحركات الرياضية */
-            @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-            @keyframes floatBlob { 0%, 100% { transform: translateY(0) scale(1) rotate(0deg); } 50% { transform: translateY(-50px) scale(1.1) rotate(10deg); } }
-            @keyframes floatLogo { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-            @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
-            @keyframes gridPan { 0% { background-position: 0 0; } 100% { background-position: 40px 40px; } }
-    
             /* المظهر وتأثيرات الإطارات */
             .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1); }
             .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -253,7 +226,6 @@
                 .showcase-inner { grid-template-columns: 1fr; }
                 .stat:not(:last-child)::after { display: none; }
                 footer { flex-direction: column; gap: 1rem; text-align: center; }
-                .code-content pre { font-size: 0.85rem; }
             }
         </style>
     </head>
@@ -264,7 +236,7 @@
         <div id="cursor-ring" style="left: 0px; top: 0px;"></div>
         <div class="noise"></div>
         
-        <!-- خلفية الفيديو المخصصة والمدمجة فائقة الوضوح والسطوع للرابط الجديد -->
+        <!-- خلفية الفيديو المخصصة والمدمجة فائقة الوضوح والسطوع للرابط المحدث -->
         <div class="video-background">
             <video autoplay loop muted playsinline id="bgVideo">
                 <source src="https://www.image2url.com/r2/default/videos/1780580004952-355e02e4-ca1a-4e0e-9831-6be1c7595ae2.mp4" type="video/mp4">
@@ -289,11 +261,10 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="#features">المميزات</a></li>
-                <li><a href="#showcase">شات روبلوكس</a></li>
-                <li><a href="#loader">الكود</a></li>
+                <li><a href="#features">المميزات والنشاطات</a></li>
+                <li><a href="#showcase">شات ديسكورد روبلوكس</a></li>
             </ul> 
-            <a href="#loader" class="nav-cta">احصل على السكربت</a>
+            <a href="https://discord.gg/ufMNhq3j42" target="_blank" class="nav-cta">انضم إلينا الآن</a>
         </nav>
 
         <section class="hero">
@@ -302,21 +273,21 @@
             <div class="hero-badge"><span class="badge-dot"></span>TK Community & Chat</div>
             <h1 class="hero-title"><em>TK</em></h1>
 
-            <p class="hero-desc">مجتمع السكربتات والدردشة العربي الأقوى في روبلوكس. شات ديسكورد تفاعلي، تبادل للأفكار والسكربتات، ونظام ضرب تلقائي خارق للهواتف بدون تأخير.</p>
+            <p class="hero-desc">المجتمع العربي الأضخم والأكثر تفاعلاً لدردشة وشات روبلوكس. تواصل مستمر، فعاليات حماسية، سيرفرات خاصة مجانية، ونقاشات ممتعة حول الألعاب والهدايا.</p>
             <div class="hero-action-area">
                 <div class="hero-btns"> 
-                    <a href="#loader" class="btn-primary">
-                        احصل على السكربت
+                    <a href="https://discord.gg/ufMNhq3j42" target="_blank" class="btn-primary">
+                        انضم للسيرفر الفوري
                         <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                     </a>
-                    <a href="#features" class="btn-ghost">استكشف المميزات</a>
+                    <a href="#features" class="btn-ghost">عرض مميزات السيرفر</a>
                 </div> 
-                <!-- زر ديسكورد الشات العربي لروبلوكس المطور مع الرابط الجديد -->
+                <!-- زر ديسكورد الشات العربي لروبلوكس المطور -->
                 <a href="https://discord.gg/ufMNhq3j42" target="_blank" class="btn-discord-wide">
                     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
-                     دخول شات ديسكورد روبلوكس العربي
+                     دخول سيرفر ديسكورد شات روبلوكس
                 </a>
             </div>
         </section>
@@ -324,53 +295,53 @@
         <div class="stats-band">
             <div class="stats-inner">
                 <div class="stat reveal visible"> 
-                    <span class="stat-num"><span class="count" data-t="99">99</span><span class="stat-unit">%</span></span>
-                    <span class="stat-label">دقة الضرب التلقائي (Hit)</span>
+                    <span class="stat-num">24<span class="stat-unit">/7</span></span>
+                    <span class="stat-label">شات ودردشة متواصلة</span>
                 </div>
                 <div class="stat reveal visible" style="transition-delay: 0.1s;"> 
-                    <span class="stat-num">0<span class="stat-unit">ms</span></span>
-                    <span class="stat-label">تأخير التنفيذ</span>
+                    <span class="stat-num">100<span class="stat-unit">%</span></span>
+                    <span class="stat-label">أمان ومجتمع خالٍ من السمية</span>
                 </div>
                 <div class="stat reveal visible" style="transition-delay: 0.2s;"> 
-                    <span class="stat-num"><span class="count" data-t="15">15</span><span class="stat-unit">+</span></span>
-                    <span class="stat-label">تخطي مضادات الغش</span>
+                    <span class="stat-num"><span class="count" data-t="50">50</span><span class="stat-unit">+</span></span>
+                    <span class="stat-label">أصدقاء جدد يومياً</span>
                 </div>
                 <div class="stat reveal visible" style="transition-delay: 0.3s;"> 
-                    <span class="stat-num">100<span class="stat-unit">%</span></span>
-                    <span class="stat-label">جاهز ومثالي للجوال</span>
+                    <span class="stat-num">5<span class="stat-unit">★</span></span>
+                    <span class="stat-label">تقييم الأعضاء واللاعبين</span>
                 </div>
             </div>
         </div>
 
         <section id="features" class="features-wrap">
             <div class="section-head reveal"> 
-                <span class="section-tag">أبرز المزايا</span>
-                <h2 class="section-title">برمجة متكاملة لتوفير أقصى <em>أداء</em></h2>
+                <span class="section-tag">مميزات لا مثيل لها</span>
+                <h2 class="section-title">تجربة مجتمعية مصممة للـ <em>متعة</em></h2>
             </div>
             <div class="feat-grid">
                 <div class="feat-card reveal"> 
                     <span class="feat-num">01</span>
                     <svg class="feat-ico" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>
-                    <div class="feat-name">ضرب تلقائي ناري (Auto Hit)</div>
-                    <p class="feat-desc">نظام حسابات دقيق ومتجاوب للسرعات والمسافات يضمن لك ضربة قاضية في الوقت الصحيح تماماً دون تأثر بالبنج.</p>
+                    <div class="feat-name">تعارف وتكوين تيمات ألعاب</div>
+                    <p class="feat-desc">اعثر بسهولة على رفاق لجميع خرائط روبلوكس الشهيرة، ونسّق مع تيم كامل لتحديات بليد بول أو الاستكشاف في ماب البيوت.</p>
                 </div>
                 <div class="feat-card reveal" style="transition-delay: 0.1s;"> 
                     <span class="feat-num">02</span>
                     <svg class="feat-ico" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z M15 9l-6 6 M9 9l6 6"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                     </svg>
-                    <div class="feat-name">منع كشف السكربت والمسافات</div>
-                    <p class="feat-desc">يكتشف انحناء مسار الكرات تلقائياً ويعدل مسافة الضرب والاستباق ديناميكياً لتجنب كشف السكربت.</p>
+                    <div class="feat-name">شات تفاعلي مباشر</div>
+                    <p class="feat-desc">قنوات دردشة منظمة وسريعة للاعبين العرب، تتيح لك قضاء أوقات رائعة وتبادل الحكايات اليومية بكل سلاسة وأمان.</p>
                 </div>
                 <div class="feat-card reveal" style="transition-delay: 0.2s;"> 
                     <span class="feat-num">03</span>
                     <svg class="feat-ico" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    <div class="feat-name">شات ديسكورد روبلوكس الأنشط</div>
-                    <p class="feat-desc">تواصل ودردش والتقي بمئات اللاعبين واللاعبات العرب يومياً لمشاركة الألعاب وتبادل الهدايا والحيوانات والسكربتات.</p>
+                    <div class="feat-name">هدايا وتجارة آمنة (Trading)</div>
+                    <p class="feat-desc">أقسام مخصصة لتبادل ومقايضة السيوف، الإكسسوارات، والحيوانات الأليفة في ألعابك المفضلة بضمان وإشراف وسطاء موثوقين.</p>
                 </div>
             </div>
         </section>
@@ -399,45 +370,17 @@
                     
                     <div class="check-list">
                         <div class="check-item"><span class="check-mark">✓</span> دردشة شات تفاعلية مستمرة على مدار الساعة مع لاعبي روبلوكس العرب</div>
-                        <div class="check-item"><span class="check-mark">✓</span> غرف صوتية (Voice) مميزة للألعاب الجماعية مثل بطولات بليد بول وماب البيوت</div>
-                        <div class="check-item"><span class="check-mark">✓</span> قنوات تداول آمنة لمقايضة الموارد والحيوانات والسيوف النادرة</div>
-                        <div class="check-item"><span class="check-mark">✓</span> قسم حرق للسكربتات لمناقشة تحديثات TK وتفعيل الضرب التلقائي على الموبايل</div>
+                        <div class="check-item"><span class="check-mark">✓</span> غرف صوتية (Voice) مميزة للألعاب الجماعية والضحك والوناسة المستمرة</div>
+                        <div class="check-item"><span class="check-mark">✓</span> قنوات تداول آمنة لمقايضة الموارد والحيوانات والسيوف النادرة بوجود وسطاء موثوقين</div>
+                        <div class="check-item"><span class="check-mark">✓</span> فعاليات ترفيهية يومية، مسابقات ممتعة، وتوزيع رتب وجوائز مجانية للأعضاء المتفاعلين</div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="loader" class="loader-wrap">
-            <div class="section-head reveal" style="margin-bottom: 3.5rem;"> 
-                <span class="section-tag">التشغيل الفوري</span>
-                <h2 class="section-title">برنامج تشغيل <em>TK Script</em></h2>
-                <p class="hero-desc" style="margin-top: 1.5rem; margin-bottom: 0; text-align: center;">انسخ الكود بالأسفل، ضعه في مشغلك المفضل، واستعد للسيطرة الكاملة على اللعب.</p>
-            </div>
-            
-            <div class="code-block-wrapper reveal" style="transition-delay: 0.2s;">
-                <div class="code-header">
-                    <div class="code-title">
-                        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                        سكربت تشغيل TK الرسمي
-                    </div>
-                    <button class="copy-btn" id="copyBtn" title="نسخ الكود">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="code-content"> 
-                    <!-- السكربت المطلوب للمستخدم -->
-                    <pre><code id="scriptText"><span class="hl-func">loadstring</span><span class="hl-punct">(</span><span class="hl-func">game</span><span class="hl-punct">:</span><span class="hl-func">HttpGet</span><span class="hl-punct">(</span><span class="hl-string">"https://raw.githubusercontent.com/mohanad9539229-boop/Yut/refs/heads/main/script.lua"</span><span class="hl-punct">))()</span></code></pre>
                 </div>
             </div>
         </section>
 
         <footer>
             <div class="foot-logo">TK COMMUNITY</div>
-            <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">© 2026 تم التطوير لتقديم الأداء الأفضل وبأعلى دقة</div>
+            <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">© 2026 مجتمع الدردشة والتعارف العربي الأكبر لروبلوكس</div>
         </footer>
 
         <script>
@@ -448,7 +391,7 @@
             (function anim() { rx += (mx - rx) * 0.2; ry += (my - ry) * 0.2; ring.style.left = rx+'px'; ring.style.top = ry+'px'; requestAnimationFrame(anim); })();
             
             // تفاعلات الأزرار والماوس
-            document.querySelectorAll('a, button, .feat-card, .copy-btn, .image-showcase-card').forEach(el => {
+            document.querySelectorAll('a, button, .feat-card, .image-showcase-card').forEach(el => {
                 el.addEventListener('mouseenter', () => { 
                     ring.style.width = '60px'; ring.style.height = '60px'; 
                     ring.style.background = 'rgba(255, 204, 0, 0.15)';
@@ -478,32 +421,6 @@
                 card.addEventListener('mouseleave', () => {
                     card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
                 });
-            });
-    
-            // --- آلية نسخ الكود بنقرة واحدة ---
-            const copyBtn = document.getElementById('copyBtn');
-            copyBtn.addEventListener('click', () => {
-                const codeToCopy = `loadstring(game:HttpGet("https://raw.githubusercontent.com/mohanad9539229-boop/Yut/refs/heads/main/script.lua"))()`;
-                
-                // حل لنسخ النصوص يدعم بيئة iframe بمرونة وسهولة
-                const el = document.createElement('textarea');
-                el.value = codeToCopy;
-                document.body.appendChild(el);
-                el.select();
-                try {
-                    document.execCommand('copy');
-                    const originalIcon = copyBtn.innerHTML;
-                    copyBtn.innerHTML = `<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>`;
-                    copyBtn.classList.add('copied');
-                    
-                    setTimeout(() => {
-                        copyBtn.innerHTML = originalIcon;
-                        copyBtn.classList.remove('copied');
-                    }, 2000);
-                } catch (err) {
-                    console.error('خطأ أثناء نسخ الكود: ', err);
-                }
-                document.body.removeChild(el);
             });
     
             // --- تأثيرات شريط التنقل العلوي ---
@@ -589,7 +506,7 @@
                         rctx.font = "10px 'Space Grotesk'";
                         rctx.fillText(`[${t.id}]`, tx + 8, ty - 5);
                         rctx.fillStyle = `rgba(255, 255, 255, ${t.opacity * 0.7})`;
-                        rctx.fillText(`VEL: ${t.vel}`, tx + 8, ty + 7);
+                        rctx.fillText(`ACTIVE: ${t.vel}`, tx + 8, ty + 7);
                         rctx.globalAlpha = 1;
                     }
                 });
